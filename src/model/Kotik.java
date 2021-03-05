@@ -33,22 +33,28 @@ public class Kotik {
 
 
     public boolean sayMeow() {
+        System.out.println("Котик говорит мяу");
         return true;
     }
 
+
     public boolean play() {
+        System.out.println("Котик играет");
         return true;
     }
 
     public boolean run() {
+        System.out.println("Котик бежит");
         return true;
     }
 
     public boolean sleep() {
+        System.out.println("Котик спит");
         return true;
     }
 
     public boolean hunts() {
+        System.out.println("Котик охотится");
         return true;
     }
 
@@ -74,29 +80,25 @@ public class Kotik {
                 case 0:
                     this.sayMeow();
                     hungerLvl -= 1;
-                    System.out.println("Котик говорит мяу");
                     break;
                 case 1:
                     this.play();
                     hungerLvl -= 1;
-                    System.out.println("Котик играет");
                     break;
                 case 2:
                     this.run();
                     hungerLvl -= 1;
-                    System.out.println("Котик бежит");
                     break;
                 case 3:
                     this.sleep();
                     hungerLvl -= 1;
-                    System.out.println("Котик спит");
                     break;
                 case 4:
                     this.hunts();
                     hungerLvl -= 1;
-                    System.out.println("Котик охотится");
                     break;
             }
+
         }
 
     }
@@ -124,5 +126,6 @@ public class Kotik {
     public String getMeow() {
         return meow;
     }
+
 
 }
