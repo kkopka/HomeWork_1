@@ -5,11 +5,13 @@ import java.util.Random;
 
 public class Kotik {
     private int hungerLvl = 10;
+    private int food = 2;
     private static int catCount;
     private int prettiness;
     private String name;
     private int weight;
     private String meow;
+
 
     public Kotik(int prettiness, String name, int weight, String meow) {
         catCount++;
@@ -33,28 +35,28 @@ public class Kotik {
 
 
     public boolean sayMeow() {
-        System.out.println("Котик говорит мяу");
+        System.out.println("говорит мяу");
         return true;
     }
 
 
     public boolean play() {
-        System.out.println("Котик играет");
+        System.out.println("играет");
         return true;
     }
 
     public boolean run() {
-        System.out.println("Котик бежит");
+        System.out.println("бегает");
         return true;
     }
 
     public boolean sleep() {
-        System.out.println("Котик спит");
+        System.out.println("спит");
         return true;
     }
 
     public boolean hunts() {
-        System.out.println("Котик охотится");
+        System.out.println("охотится");
         return true;
     }
 
@@ -63,17 +65,20 @@ public class Kotik {
     }
 
     public void eat(int food, String nameFood) {
-        hungerLvl += food;
+        System.out.println("съел " + nameFood + " в количестве " + food + "-ух пачек");
     }
 
     public void eat() {
-        eat(2, "Кошачий корм");
+        eat(2, "кошачий корм");
     }
 
     public void liveAnotherDay() {
-        for (int i = 0; i < 24; i++) {
+        for (int i = 1; i < 25; i++) {
+            System.out.print("Итерация №" + i + ": "+this.name+" ");
             if (hungerLvl <= 0) {
+                eat(food);
                 eat();
+                continue;
             }
             Random random = new Random();
             switch (random.nextInt(5)) {
