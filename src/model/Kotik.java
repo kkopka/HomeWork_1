@@ -65,7 +65,7 @@ public class Kotik {
     }
 
     public void eat(int food, String nameFood) {
-        System.out.println("съел " + nameFood + " в количестве " + food + "-ух пачек");
+        System.out.println("съел " + nameFood + " в количестве " + food + "-ух пачек ");
     }
 
     public void eat() {
