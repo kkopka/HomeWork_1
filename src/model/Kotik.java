@@ -69,12 +69,12 @@ public class Kotik {
     }
 
     public void eat() {
-        eat(2, "кошачий корм");
+        eat(food, "кошачий корм");
     }
 
     public void liveAnotherDay() {
         for (int i = 1; i < 25; i++) {
-            System.out.print("Итерация №" + i + ": "+this.name+" ");
+            System.out.print("Итерация №" + i + ": " + this.name + " ");
             if (hungerLvl <= 0) {
                 eat(food);
                 eat();
@@ -115,6 +115,7 @@ public class Kotik {
     public String getName() {
         return name;
     }
+
     public int getWeight() {
         return weight;
     }
