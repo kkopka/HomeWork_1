@@ -4,14 +4,14 @@ import java.sql.SQLOutput;
 import java.util.Random;
 
 public class Kotik {
+
     private int hungerLvl = 10;
-    private int food=2;
+    private int food = 2;
     private static int catCount;
     private int prettiness;
     private String name;
     private int weight;
     private String meow;
-
 
     public Kotik(int prettiness, String name, int weight, String meow) {
         catCount++;
@@ -23,7 +23,7 @@ public class Kotik {
 
     public Kotik() {
         catCount++;
-        setKotik(34, "Vasya", 24, "Мяу мяу");
+        setKotik(35, "Vasya", 22, "Мяу мяу");
     }
 
     private void setKotik(int prettiness, String name, int weight, String meow) {
@@ -65,20 +65,20 @@ public class Kotik {
     }
 
     public void eat(int food, String nameFood) {
-        System.out.print("съел "+nameFood+" в количестве "+food+"-ух пачек после чего " );
+        System.out.println("съел " + nameFood + " в количестве " + food + "-ух пачек");
     }
 
     public void eat() {
         eat(2, "кошачий корм");
     }
 
-
     public void liveAnotherDay() {
         for (int i = 1; i < 25; i++) {
-            System.out.print("Итерация №"+i+": ");
+            System.out.print("Итерация №" + i + ": "+this.name+" ");
             if (hungerLvl <= 0) {
                 eat(food);
                 eat();
+                continue;
             }
             Random random = new Random();
             switch (random.nextInt(5)) {
@@ -108,22 +108,13 @@ public class Kotik {
 
     }
 
-    public int getHungerLvl() {
-        return hungerLvl;
-    }
-
     public static int getCatCount() {
         return catCount;
-    }
-
-    public int getPrettiness() {
-        return prettiness;
     }
 
     public String getName() {
         return name;
     }
-
     public int getWeight() {
         return weight;
     }
@@ -132,8 +123,5 @@ public class Kotik {
         return meow;
     }
 
-    public int getFood() {
-        return food;
-    }
-
 }
+
