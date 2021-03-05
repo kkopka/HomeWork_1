@@ -15,4 +15,5 @@ public class Application {
         }
         System.out.println("Создано котиков: " + Kotik.getCatCount());
     }
+
 }
