@@ -72,6 +72,7 @@ public class Kotik {
         eat(2, "кошачий корм");
     }
 
+
     public void liveAnotherDay() {
         for (int i = 1; i < 25; i++) {
             System.out.print("Итерация №"+i+": ");
@@ -131,5 +132,8 @@ public class Kotik {
         return meow;
     }
 
+    public int getFood() {
+        return food;
+    }
 
 }
