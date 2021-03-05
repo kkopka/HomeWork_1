@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Kotik {
     private int hungerLvl = 10;
-    private int food = 2;
+    private int food=2;
     private static int catCount;
     private int prettiness;
     private String name;
@@ -65,7 +65,7 @@ public class Kotik {
     }
 
     public void eat(int food, String nameFood) {
-        System.out.println("съел " + nameFood + " в количестве " + food + "-ух пачек");
+        System.out.print("съел "+nameFood+" в количестве "+food+"-ух пачек после чего " );
     }
 
     public void eat() {
@@ -74,11 +74,10 @@ public class Kotik {
 
     public void liveAnotherDay() {
         for (int i = 1; i < 25; i++) {
-            System.out.print("Итерация №" + i + ": "+this.name+" ");
+            System.out.print("Итерация №"+i+": ");
             if (hungerLvl <= 0) {
                 eat(food);
                 eat();
-                continue;
             }
             Random random = new Random();
             switch (random.nextInt(5)) {
